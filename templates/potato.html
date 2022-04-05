@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Remote Jobs</title>
+        <style>
+            h1{
+                text-align: center;
+            }
+            .text1{
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .box1{
+                width : 600px;
+                height : 100px;
+                border-color: rgba(226, 226, 226, 0.466);
+                border-width: 1px;
+                border-style: solid;
+                padding: 40px 40px;
+                margin: 20px 20px;
+                position: absolute;
+                left: 300px;
+                top : 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Remote Jobs</h1>
+        <div class="box1">
+        <p class="text1">Search by term:</p>
+        <form action="/report" method="get">
+            <input placeholder='i.e python' required name="word"/>
+            <div>
+            <p><button style="color: #fff; background:#3B84EC; border:#3B84EC;border-radius:0.5em; padding:15px 20px;">Find my job</button></p>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>

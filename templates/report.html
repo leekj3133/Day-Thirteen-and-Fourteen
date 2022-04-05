@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Remote Jobs</title>
+        <style>
+            section {
+                display:grid;
+                gap:20px;
+                /* grid-template-columns: repeat(3,1fr); */
+
+            }
+            a{
+                color: #884CBC;
+                text-align: center;
+                font-weight: bold;
+            }
+            .atag{
+                text-align:center;
+            }
+            header{
+                background: #fff; 
+                height:150px;
+            }
+            hr{
+                border-color : #eae3f033;
+                width: 30%;
+                border-width : 0.5px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <p><h1 align="center" >Remote Jobs</h1></p>
+        <h3 align="center" > {{resultNumber}} {{searchingBy}} jobs found. </h3>
+        <div class="atag">
+            <a class="text1" align="center" style="text-decoration: none; font-size:14px;"href="/export?word={{searchingBy}}">Export to CSV</a>
+            <p><a class="text1" align="center" style="text-decoration: none; font-size:11px;"class="text1" href="/">← Go back </a></p>
+        </br>
+        </br>
+        </div>    
+        <section>
+            {% for job in jobs %}
+                <span align="center" style="font-weight: bold;">{{job.title}}</span>
+                <span align="center">{{job.company}}</span>
+                <a href="{{job.url}}" style="text-decoration: none; align='center'" >Apply</a>
+                <hr align="center" >
+            {% endfor %}
+        </section>
+    </body>
+</html>
